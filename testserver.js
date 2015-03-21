@@ -12,8 +12,8 @@ var url = require('url');
 var express = require('express');
 var api = require('./graph_api');
 
-api.throttleRequests = 10;
-api.throttleInterval = 10; //sec
+api.throttleRequests = 60;
+api.throttleInterval = 600; //sec
 api.endpoint = 'https://graph.facebook.com';
 api.token = 'token';
 
