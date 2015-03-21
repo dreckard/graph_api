@@ -2,8 +2,9 @@
 // Simple throttling Facebook graph API library for node.js
 // 
 // Install/Setup:
-//   Simply place in the proper directory and load as a file module with
-//   require('./graph_api')
+//   Use npm install dreckard/graph_api to install everything directly from github
+//   or simply place this file in the proper directory and load as a file module 
+//   with require('./graph_api')
 //
 // Usage:
 //   All requests return Q promise objects and errors are logged to <logFile>
