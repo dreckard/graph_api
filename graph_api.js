@@ -79,6 +79,7 @@ function submitRequest(context)
     //winston.info('Submitting request to: ' + context.url);
     //context.deferred.resolve('Result!\nCounter: ' + throttleCounter + '\nQueue: ' + throttleQueue.length);
     
+    setTimeout(processRequestQueue,exports.throttleInterval*1000);
     request({method: context.method, url: context.url, form: context.form}, function (error, response, body) {
         var reqError = checkRequestError(context.method,context.url,response,body,error);
         if (reqError)
@@ -106,7 +107,6 @@ function queueRequest(reqMethod,path,content)
     else
         submitRequest(reqContext);
     
-    setTimeout(processRequestQueue,exports.throttleInterval*1000);
     return def.promise;
 }
 exports.get = function(path)
