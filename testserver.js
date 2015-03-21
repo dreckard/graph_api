@@ -18,7 +18,7 @@ api.endpoint = 'https://graph.facebook.com';
 api.token = 'token';
 
 var app = express();
-var server = app.listen(3000);
+var server = app.listen(3000, function () { console.log('Server listening on port %s...', server.address().port); });
 app.get('/', function (req,res) {
         res.end('Server is running...');
     });
@@ -46,4 +46,3 @@ app.get('/delete/:id', function (req,res) {
                function(err)  { res.end('Error: ' + err.message) } );
     });*/
     
-console.log('Server running...');
