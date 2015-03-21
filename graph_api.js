@@ -102,7 +102,7 @@ function queueRequest(reqMethod,path,content)
     var reqContext = {deferred: def, method: reqMethod, url: url.format(genUrl(path)), form: content};
     
     throttleCounter++;
-    if ( throttleCounter >= exports.throttleRequests )
+    if ( throttleCounter > exports.throttleRequests )
         throttleQueue.push(reqContext);
     else
         submitRequest(reqContext);
