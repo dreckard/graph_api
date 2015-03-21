@@ -1,0 +1,13 @@
+{
+  "name": "graph_api",
+  "version": "1.0.0",
+  "main": "graph_api.js",
+  "private": true,
+  "dependencies": {
+    "express": "^4.12.3",
+    "q": "^1.2.0",
+    "request": "^2.53.0",
+    "tiny-queue": "^0.2.1",
+    "winston": "^0.9.0"
+  }
+}
